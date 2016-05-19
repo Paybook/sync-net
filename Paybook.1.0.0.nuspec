@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Paybook</id>
+        <version>1.0.0</version>
+        <authors>ramossf</authors>
+        <projectUrl>https://github.com/Paybook/sync-net</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>this is a .net sdk to comunicate with paybook service</description>
+        <language>en-US</language>
+    </metadata>
+    <files>
+        <file src="..\Paybook\Paybook\bin\Release\Paybook.dll" target="lib\Paybook.dll" />
+    </files>
+</package>
