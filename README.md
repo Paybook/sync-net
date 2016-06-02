@@ -13,14 +13,14 @@
 
 **Downloading from Nuget Gallery**
 ----
-    Open in Visual Studio
-	Create a new web or webapi project
-    Right click on References
-	On contextual menu select the option "Manage Nuget Packages..." 
-	Under browser Option type on search text box "Paybook", press enter.
-	You will see on the list Paybook v1.0.0 select it and on right panel click on Install button
-	In preview window click on "OK" Button
-	In order to verify the correct installation expand References and you will see Paybook.dll added
+    -- Open in Visual Studio
+	-- Create a new web or webapi project
+    -- Right click on References
+	-- On contextual menu select the option "Manage Nuget Packages..." 
+	-- Under browser Option type on search text box "Paybook", press enter.
+	-- You will see on the list Paybook v1.0.0 select it and on right panel click on Install button
+	-- In preview window click on "OK" Button
+	-- In order to verify the correct installation expand References and you will see Paybook.dll added
     	
 **Signup**
 ----
@@ -42,9 +42,9 @@
   
 	`Exception=[Exception]`
 
-
 * **Sample Call:**
 
+----
 	Paybook paybook = new Paybook();
 	string id_user = paybook.signup("some username");
 
@@ -70,6 +70,7 @@
 
 * **Sample Call:**
 
+----
 	Paybook paybook = new Paybook();
 	token = paybook.login("some id_user");
 
