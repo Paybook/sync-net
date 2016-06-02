@@ -1,16 +1,29 @@
-# sync-net (Paybook SDK for .NET)
-
+# sync-net
 
 **Overview**
 ----
-	-- This is a lightweight Paybook SDK for .NET, wich allows you to consume
-	   Paybook methods.
+	-- This is a lightweight Paybook SDK for .NET, wich allows you to consume Paybook methods.
 
 **Prerequisites**
 ----
     -- Visual Studio 2012 or above
     -- Microsoft .NET Framework 4.5 or above
 
+**Downloading from Github**
+----
+	-- Open in Visual Studio
+	-- Create a new web or webapi project
+    -- Download Paybook.dll from this site which is contained into lib folder
+	-- Create a folder called "lib" in your main project folder
+	-- Paste Paybook.dll into lib folder
+	-- Go back to Visual Studio
+	-- Right click on References
+	-- On contextual menu select the option "Add Reference..." 
+	-- Click on "Browse" button, in find Paybook.dll
+	-- Click on "Add" button
+	-- Click on "OK" button
+	-- You will see on References a Paybook.dll added
+	
 **Downloading from Nuget Gallery**
 ----
     -- Open in Visual Studio
