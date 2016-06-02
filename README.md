@@ -44,9 +44,10 @@
 
 * **Sample Call:**
 
-----
+    ```
 	Paybook paybook = new Paybook();
 	string id_user = paybook.signup("some username");
+	```
 
 **Login**
 ----
@@ -70,9 +71,10 @@
 
 * **Sample Call:**
 
-----
+    ```
 	Paybook paybook = new Paybook();
 	token = paybook.login("some id_user");
+	```
 
 **Catalogs**
 ----
@@ -96,9 +98,11 @@
 	`Exception=[Exception]`
 
 * **Sample Call:**
-
+	
+	```
 	Paybook paybook = new Paybook();
 	token = paybook.login("some id_user");
+	```
 
 **Credentials**
 ----
@@ -122,11 +126,13 @@
 	`Exception=[Exception]`
 
 * **Sample Call:**
-
+	
+	```
 	Paybook paybook = new Paybook();
 	JObject credentials = new JObject();
     JObject new_credentials = paybook.credentials(credentials);
-
+	```
+	
 **Status**
 ----
   Get the sync status of a specific institution
@@ -151,9 +157,11 @@
 	`Exception=[Exception]`
 
 * **Sample Call:**
-
+	
+	```
 	Paybook paybook = new Paybook();
     status = paybook.status("some token", "some id_site", "some url_status");
+	```
   
 **Accounts**
 ----
@@ -179,8 +187,10 @@
 
 * **Sample Call:**
 
+	```
 	Paybook paybook = new Paybook();
     accounts = paybook.accounts("some token", "some id_site");
+	```
   
 **Transactions**
 ----
@@ -206,5 +216,7 @@
 
 * **Sample Call:**
 
+	```
 	Paybook paybook = new Paybook();
 	transactions = paybook.transactions("some token", "some id_account");
+	```
