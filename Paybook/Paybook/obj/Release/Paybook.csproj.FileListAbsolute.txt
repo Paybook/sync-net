@@ -1,0 +1,6 @@
+C:\Users\gdlvramo\Documents\GitHub\pb_net_lite\pb_sdk\Paybook\Paybook\bin\Release\Paybook.dll
+C:\Users\gdlvramo\Documents\GitHub\pb_net_lite\pb_sdk\Paybook\Paybook\bin\Release\Paybook.pdb
+C:\Users\gdlvramo\Documents\GitHub\pb_net_lite\pb_sdk\Paybook\Paybook\bin\Release\Newtonsoft.Json.dll
+C:\Users\gdlvramo\Documents\GitHub\pb_net_lite\pb_sdk\Paybook\Paybook\bin\Release\Newtonsoft.Json.xml
+C:\Users\gdlvramo\Documents\GitHub\pb_net_lite\pb_sdk\Paybook\Paybook\obj\Release\Paybook.dll
+C:\Users\gdlvramo\Documents\GitHub\pb_net_lite\pb_sdk\Paybook\Paybook\obj\Release\Paybook.pdb
