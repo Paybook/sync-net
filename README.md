@@ -201,8 +201,10 @@
 * **Sample Call:**
 	
 	```
-    paybook.twofa({"token":"some token"}, "some url twofa");
-	```
+	twofa = new JObject(new JProperty("token", "paybook token"), new JProperty("twofa", new JObject(new JProperty("token", "some bank token"))));
+	Paybook paybook = new Paybook();
+        JObject new_twofa = paybook.twofa(twofa,"some url twofa");
+        ```
   
 **Accounts**
 ----
