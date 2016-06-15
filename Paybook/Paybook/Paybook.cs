@@ -14,7 +14,7 @@ namespace PaybookSDK
     {
         string paybook_link;
         string api_key;
-        
+
         /// <summary>
         /// Paybook constructor
         /// reads by default from webconfig file
@@ -57,12 +57,16 @@ namespace PaybookSDK
                         return user["response"]["id_user"].ToString();
                     }
                     else
-                        return string.Empty;
+                        throw new PBException(response.StatusCode.ToString(), response.IsSuccessStatusCode, response.ReasonPhrase, response);
                 }
+            }
+            catch (PBException pbEx)
+            {
+                throw pbEx;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new PBException("500", false, ex.Message, null);
             }
         }
 
@@ -92,12 +96,16 @@ namespace PaybookSDK
                         return user["response"]["token"].ToString();
                     }
                     else
-                        return string.Empty;
+                        throw new PBException(response.StatusCode.ToString(), response.IsSuccessStatusCode, response.ReasonPhrase, response);
                 }
+            }
+            catch (PBException pbEx)
+            {
+                throw pbEx;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new PBException("500", false, ex.Message, null);
             }
         }
 
@@ -106,7 +114,7 @@ namespace PaybookSDK
         /// </summary>
         /// <param name="token">string</param>
         /// <returns>string</returns>
-        public string catalogs(string token)
+        public string catalogs(string token, bool is_test = false)
         {
             try
             {
@@ -117,7 +125,7 @@ namespace PaybookSDK
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                     // HTTP GET Using QueryStrings
-                    string parameters = "catalogues/sites?token=" + token;
+                    string parameters = "catalogues/sites?token=" + token + (is_test ? "&is_test=1" : string.Empty);
 
                     HttpResponseMessage response = client.GetAsync(parameters).Result;
                     if (response.IsSuccessStatusCode)
@@ -127,12 +135,16 @@ namespace PaybookSDK
                         return catalogs["response"].ToString();
                     }
                     else
-                        return string.Empty;
+                        throw new PBException(response.StatusCode.ToString(), response.IsSuccessStatusCode, response.ReasonPhrase, response);
                 }
+            }
+            catch (PBException pbEx)
+            {
+                throw pbEx;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new PBException("500", false, ex.Message, null);
             }
         }
 
@@ -160,12 +172,16 @@ namespace PaybookSDK
                         return (JObject)user["response"];
                     }
                     else
-                        return null;
+                        throw new PBException(response.StatusCode.ToString(), response.IsSuccessStatusCode, response.ReasonPhrase, response);
                 }
+            }
+            catch (PBException pbEx)
+            {
+                throw pbEx;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new PBException("500", false, ex.Message, null);
             }
         }
 
@@ -196,12 +212,54 @@ namespace PaybookSDK
                         return credentials["response"].ToString();
                     }
                     else
-                        return string.Empty;
+                        throw new PBException(response.StatusCode.ToString(), response.IsSuccessStatusCode, response.ReasonPhrase, response);
                 }
+            }
+            catch (PBException pbEx)
+            {
+                throw pbEx;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new PBException("500", false, ex.Message, null);
+            }
+        }
+
+        /// <summary>
+        /// Send token for a credential
+        /// </summary>
+        /// <param name="twofa">JObject</param>
+        /// <param name="address">string</param>
+        /// <returns>string</returns>
+        public JObject twofa(JObject twofa, string address)
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri(paybook_link);
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    HttpResponseMessage response = client.PostAsync(address, new StringContent(twofa.ToString(), Encoding.UTF8, "application/json")).Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string respon = response.Content.ReadAsStringAsync().Result;
+                        JObject token = JObject.Parse(respon);
+                        return token;
+                    }
+                    else
+                        throw new PBException(response.StatusCode.ToString(), response.IsSuccessStatusCode, response.ReasonPhrase, response);
+                }
+            }
+            catch (PBException pbEx)
+            {
+                throw pbEx;
+            }
+            catch (Exception ex)
+            {
+                throw new PBException("500", false, ex.Message, null);
             }
         }
 
@@ -231,12 +289,16 @@ namespace PaybookSDK
                         return credentials["response"].ToString();
                     }
                     else
-                        return string.Empty;
+                        throw new PBException(response.StatusCode.ToString(), response.IsSuccessStatusCode, response.ReasonPhrase, response);
                 }
+            }
+            catch (PBException pbEx)
+            {
+                throw pbEx;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new PBException("500", false, ex.Message, null);
             }
         }
 
@@ -266,12 +328,16 @@ namespace PaybookSDK
                         return credentials["response"].ToString();
                     }
                     else
-                        return string.Empty;
+                        throw new PBException(response.StatusCode.ToString(), response.IsSuccessStatusCode, response.ReasonPhrase, response);
                 }
+            }
+            catch (PBException pbEx)
+            {
+                throw pbEx;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new PBException("500", false, ex.Message, null);
             }
         }
     }

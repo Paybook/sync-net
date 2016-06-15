@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="JsonContent.cs" />
     <Compile Include="Paybook.cs" />
+    <Compile Include="PBException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
