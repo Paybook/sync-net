@@ -175,6 +175,34 @@
 	Paybook paybook = new Paybook();
     status = paybook.status("some token", "some id_site", "some url_status");
 	```
+	
+**Twofa**
+----
+  Set twofa to a specific institution
+
+* **Method:**
+  
+	string twofa(JObject twofa, string address
+
+   **Required:**
+ 
+	`twofa=[JObject]`
+	`address=[string]`
+
+* **Success Response:**
+  
+	`response=[string]`
+	Note: this response is a JSON Object
+	
+* **Error Response:**
+  
+	`Exception=[Exception]`
+
+* **Sample Call:**
+	
+	```
+    paybook.twofa({"token":"some token"}, "some url twofa");
+	```
   
 **Accounts**
 ----
