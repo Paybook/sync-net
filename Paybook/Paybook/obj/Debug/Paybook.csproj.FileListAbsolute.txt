@@ -2,5 +2,13 @@ C:\Users\gdlvramo\Documents\GitHub\pb_net_lite\pb_sdk\Paybook\Paybook\bin\Debug\
 C:\Users\gdlvramo\Documents\GitHub\pb_net_lite\pb_sdk\Paybook\Paybook\bin\Debug\Paybook.pdb
 C:\Users\gdlvramo\Documents\GitHub\pb_net_lite\pb_sdk\Paybook\Paybook\bin\Debug\Newtonsoft.Json.dll
 C:\Users\gdlvramo\Documents\GitHub\pb_net_lite\pb_sdk\Paybook\Paybook\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gdlvramo\Documents\GitHub\pb_net_lite\pb_sdk\Paybook\Paybook\obj\Debug\Paybook.csprojResolveAssemblyReference.cache
 C:\Users\gdlvramo\Documents\GitHub\pb_net_lite\pb_sdk\Paybook\Paybook\obj\Debug\Paybook.dll
 C:\Users\gdlvramo\Documents\GitHub\pb_net_lite\pb_sdk\Paybook\Paybook\obj\Debug\Paybook.pdb
+C:\Users\gdlvramo\Documents\GitHub\sync-net\Paybook\Paybook\bin\Debug\Paybook.dll
+C:\Users\gdlvramo\Documents\GitHub\sync-net\Paybook\Paybook\bin\Debug\Paybook.pdb
+C:\Users\gdlvramo\Documents\GitHub\sync-net\Paybook\Paybook\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gdlvramo\Documents\GitHub\sync-net\Paybook\Paybook\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gdlvramo\Documents\GitHub\sync-net\Paybook\Paybook\obj\Debug\Paybook.dll
+C:\Users\gdlvramo\Documents\GitHub\sync-net\Paybook\Paybook\obj\Debug\Paybook.pdb
+C:\Users\gdlvramo\Documents\GitHub\sync-net\Paybook\Paybook\obj\Debug\Paybook.csprojResolveAssemblyReference.cache

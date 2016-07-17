@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paybook", "Paybook\Paybook.csproj", "{ED50E44A-ADCD-466F-8EB0-B2EE7032B919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{3807A3FB-8950-4207-A24C-AA7B9AA64E5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickStarts", "QuickStarts\QuickStarts\QuickStarts.csproj", "{7115D6BB-F6B7-4929-8500-9705360E1EB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{ED50E44A-ADCD-466F-8EB0-B2EE7032B919}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED50E44A-ADCD-466F-8EB0-B2EE7032B919}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED50E44A-ADCD-466F-8EB0-B2EE7032B919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3807A3FB-8950-4207-A24C-AA7B9AA64E5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3807A3FB-8950-4207-A24C-AA7B9AA64E5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3807A3FB-8950-4207-A24C-AA7B9AA64E5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3807A3FB-8950-4207-A24C-AA7B9AA64E5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7115D6BB-F6B7-4929-8500-9705360E1EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7115D6BB-F6B7-4929-8500-9705360E1EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7115D6BB-F6B7-4929-8500-9705360E1EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7115D6BB-F6B7-4929-8500-9705360E1EB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
