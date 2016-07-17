@@ -1,19 +1,34 @@
 
 ##QUICKSTART BANCO NORMAL
 
-A lo largo de este tutorial te enseñaremos como sincronizar una institución bancaria normal, es decir, aquella que solo requiere una autenticación (usuario y contraseña), ejemplos de estas instituciones pueden ser Banamex o Santander. En el tutorial asumiremos que ya hemos creado usuarios y por tanto tenemos usuarios ligados a nuestra API KEY, también asumiremos que hemos instalado la librería de python y hecho las configuraciones pertinentes. Si tienes dudas acerca de esto te recomendamos que antes de tomar este tutorial consultes el [Quickstart para sincronizar al SAT](https://github.com/Paybook/sync-py/blob/master/quickstart_sat.md) ya que aquí se abordan los temas de creación de usuarios y sesiones.  
+A lo largo de este tutorial te enseñaremos como sincronizar una institución bancaria normal, es decir, aquella que solo requiere una autenticación (usuario y contraseña), ejemplos de estas instituciones pueden ser Banamex o Santander. En el tutorial asumiremos que ya hemos creado usuarios y por tanto tenemos usuarios ligados a nuestra API KEY, también asumiremos que hemos instalado la librería de python y hecho las configuraciones pertinentes. Si tienes dudas acerca de esto te recomendamos que antes de tomar este tutorial consultes el [Quickstart para sincronizar al SAT](https://github.com/Paybook/sync-net/blob/master/quickstart_sat.md) ya que aquí se abordan los temas de creación de usuarios y sesiones.  
 
 ### Requerimientos
 
-1. Haber consultado el tutorial [Quickstart para sincronizar al SAT](https://github.com/Paybook/sync-net/blob/master/quickstart_sat.cs)
+1. Haber consultado el tutorial [Quickstart para sincronizar al SAT](https://github.com/Paybook/sync-net/blob/master/quickstart_sat.md)
 2. Tener credenciales de alguna institución bancaria que cuente con autenticación simple (usuario y contraseña)
 
 ##Ejecución:
 
-Este tutorial está basado en el script [quickstart_normal_bank.cs](https://github.com/Paybook/sync-net/blob/master/quickstart_normal_bank.cs) por lo que puedes descargar el archivo, configurar los valores YOUR_API_KEY, YOUR_BANK_USERNAME y YOUR_BANK_PASSWORD y ejecutarlo en tu equipo:
+Este tutorial está basado en el script "quickstart_normal.cs" de la solucion PayBook.sln, por lo que puedes descargar toda la solucion de la [carpeta](https://github.com/Paybook/sync-net/tree/master/Paybook), configurar como projecto de inicio el archivo "Quickstarts.csproj", configurar los valores YOUR_API_KEY, YOUR_BANK_USERNAME y YOUR_BANK_PASSWORD, compilar toda la solucion y ejecutarlo en tu equipo(F5):
 
 ```
-$ quickstart_normal_bank.cs
+public class Program
+{
+	static void Main(string[] args)
+	{
+		quickstart_normal normal = new quickstart_normal();
+		normal.start();
+
+		//uncomment this section in order to execute quickstart_sat
+		//quickstart_sat sat = new quickstart_sat();
+		//sat.start();
+
+		//uncomment this section in order to execute quickstart_token_bank
+		//quickstart_token_bank token_bank = new quickstart_token_bank();
+		//token_bank.start();
+	}
+}
 ```
 
 Una vez que has ejecutado el archivo podemos continuar analizando el código.
@@ -202,7 +217,7 @@ foreach (var item in transactions)
 
 - Revisar el tutorial de como sincronizar una institución bancaria con token [aquí](https://github.com/Paybook/sync-net/blob/master/quickstart_token_bank.md)
 
-- Puedes consultar y analizar la documentación completa de la librearía [aquí](https://github.com/Paybook/sync-net/blob/master/readme.md)
+- Puedes consultar y analizar la documentación completa de la librearía [aquí](https://github.com/Paybook/sync-net/blob/master/README.md)
 
 - Puedes consultar y analizar la documentación del API REST [aquí](https://www.paybook.com/sync/docs#api-Overview)
 
