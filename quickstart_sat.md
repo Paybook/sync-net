@@ -12,25 +12,40 @@
 
 A lo largo de este tutorial te enseñaremos como consumir el API Rest de Paybook por medio de la librería de Paybook. Al terminar este tutorial habrás podido crear nuevos usuarios en Paybook, sincronizar algunas instituciones de estos usuarios y visualizar las transacciones sincronizadas.
 
-La documentación completa de la librería la puedes consultar [aquí](https://github.com/Paybook/sync-py/blob/master/readme.md) 
+La documentación completa de la librería la puedes consultar [aquí](https://github.com/Paybook/sync-net/blob/master/README.md) 
 
 ##En la consola:
 
 ####1. Instalamos la librería de Paybook y dependencias:
 
-Para consumir el API de Paybook lo primero que tenemos que hacer es instalar la libreria de Paybook haciendo uso del paquete de instalaciones:
+Para consumir el API de Paybook lo primero que tenemos que hacer es instalar la libreria de Paybook haciendo uso del paquete de instalaciones (En visual studio ir a Tools/Nuget Package Manager/Package Manager Console):
 
 ```
 PM > Install-Package Paybook
 ```
 
-**Importante: ** Es posible que la ejecución del comando anterior requiera permisos de super usuario (sudo) esto depende de como tengas configurado Python en tu equipo.
+**Importante: ** Es posible que la ejecución del comando anterior requiera que visual studio se ejecute como administrador.
 
 ####2. Ejecutamos el Script:
-Este tutorial está basado en el script [quickstart.py](https://github.com/Paybook/sync-py/blob/master/quickstart_sat.py) por lo que puedes descargar el archivo, configurar los valores YOUR_API_KEY, YOUR_RFC y YOUR_CIEC y ejecutarlo en tu equipo:
+Este tutorial está basado en el script [quickstart_sat.cs](https://github.com/Paybook/sync-net/blob/master/Paybook/QuickStarts/QuickStarts/quickstart_sat.cs) de la solucion PayBook.sln, por lo que puedes descargar toda la solucion de la [carpeta](https://github.com/Paybook/sync-net/tree/master/Paybook), configurar como projecto de inicio el archivo "Quickstarts.csproj", configurar los valores YOUR_API_KEY, YOUR_RFC y YOUR_CIEC, compilar toda la solucion y ejecutarlo en tu equipo (F5):
 
 ```C#
-$ quickstart_sat.cs
+public class Program
+{
+	static void Main(string[] args)
+	{
+	    //uncomment this section in order to execute quickstart_sat
+		//quickstart_normal normal = new quickstart_normal();
+		//normal.start();
+
+		quickstart_sat sat = new quickstart_sat();
+		sat.start();
+
+		//uncomment this section in order to execute quickstart_token_bank
+		//quickstart_token_bank token_bank = new quickstart_token_bank();
+		//token_bank.start();
+	}
+}
 ```
 
 A continuación explicaremos detalladamente la lógica del script que acabas de ejecutar.
@@ -191,11 +206,11 @@ if (attachments.Count > 0)
 
 ### Siguientes Pasos
 
-- Revisar el tutorial de como sincronizar una institución bancaria con credenciales simples (usuario y contraseña) [aquí](https://github.com/Paybook/sync-py/blob/master/quickstart_normal_bank.md)
+- Revisar el tutorial de como sincronizar una institución bancaria con credenciales simples (usuario y contraseña) [aquí](https://github.com/Paybook/sync-net/blob/master/quickstart_normal_bank.md)
 
-- Revisar el tutorial de como sincronizar una institución bancaria con token [aquí](https://github.com/Paybook/sync-py/blob/master/quickstart_token_bank.md)
+- Revisar el tutorial de como sincronizar una institución bancaria con token [aquí](https://github.com/Paybook/sync-net/blob/master/quickstart_token_bank.md)
 
-- Puedes consultar y analizar la documentación completa de la librería [aquí](https://github.com/Paybook/sync-py/blob/master/readme.md)
+- Puedes consultar y analizar la documentación completa de la librería [aquí](https://github.com/Paybook/sync-net/blob/master/README.md)
 
 - Puedes consultar y analizar la documentación del API REST [aquí](https://www.paybook.com/sync/docs#api-Overview)
 

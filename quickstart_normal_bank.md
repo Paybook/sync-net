@@ -10,7 +10,7 @@ A lo largo de este tutorial te enseñaremos como sincronizar una institución ba
 
 ##Ejecución:
 
-Este tutorial está basado en el script "quickstart_normal.cs" de la solucion PayBook.sln, por lo que puedes descargar toda la solucion de la [carpeta](https://github.com/Paybook/sync-net/tree/master/Paybook), configurar como projecto de inicio el archivo "Quickstarts.csproj", configurar los valores YOUR_API_KEY, YOUR_BANK_USERNAME y YOUR_BANK_PASSWORD, compilar toda la solucion y ejecutarlo en tu equipo(F5):
+Este tutorial está basado en el script [quickstart_normal.cs](https://github.com/Paybook/sync-net/blob/master/Paybook/QuickStarts/QuickStarts/quickstart_normal.cs) de la solucion PayBook.sln, por lo que puedes descargar toda la solucion de la [carpeta](https://github.com/Paybook/sync-net/tree/master/Paybook), configurar como projecto de inicio el archivo "Quickstarts.csproj", configurar los valores YOUR_API_KEY, YOUR_BANK_USERNAME y YOUR_BANK_PASSWORD, compilar toda la solucion y ejecutarlo en tu equipo (F5):
 
 ```
 public class Program
