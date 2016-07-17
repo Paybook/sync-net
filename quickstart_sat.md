@@ -34,7 +34,7 @@ public class Program
 {
 	static void Main(string[] args)
 	{
-	    //uncomment this section in order to execute quickstart_sat
+	    //uncomment this section in order to execute quickstart_normal
 		//quickstart_normal normal = new quickstart_normal();
 		//normal.start();
 

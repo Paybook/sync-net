@@ -5,16 +5,31 @@ A lo largo de este tutorial te enseñaremos como sincronizar una institución ba
 
 ### Requerimientos
 
-1. Haber consultado el tutorial [Quickstart General](https://github.com/Paybook/sync-py/blob/master/quickstart.md)
+1. Haber consultado el tutorial [Quickstart General](https://github.com/Paybook/sync-net/blob/master/quickstart_normal_bank.md)
 2. Tener credenciales de alguna institución bancaria del catálogo de Paybook que solicite token
 
 
 ##Ejecución:
 
-Este tutorial está basado en el script [quickstart_token_bank.cs](https://github.com/Paybook/sync-py/blob/master/quickstart_token_bank.py) por lo que puedes descargar el archivo, configurar los valores YOUR_API_KEY, YOUR_BANK_USERNAME y YOUR_BANK_PASSWORD y ejecutarlo en tu equipo. Es recomendable tener el token a la mano puesto que el script eventualmente lo solicitará:
+Este tutorial está basado en el script [quickstart_token_bank.cs](https://github.com/Paybook/sync-net/blob/master/Paybook/QuickStarts/QuickStarts/quickstart_token_bank.cs) de la solucion PayBook.sln, por lo que puedes descargar toda la solucion de la [carpeta](https://github.com/Paybook/sync-net/tree/master/Paybook), configurar como projecto de inicio el archivo "Quickstarts.csproj", configurar los valores YOUR_API_KEY, YOUR_BANK_USERNAME y YOUR_BANK_PASSWORD compilar toda la solucion y ejecutarlo en tu equipo (F5). Es recomendable tener el token a la mano puesto que el script eventualmente lo solicitará:
 
 ```
-$ quickstart_normal_bank.cs
+public class Program
+{
+	static void Main(string[] args)
+	{
+	    //uncomment this section in order to execute quickstart_normal
+		//quickstart_normal normal = new quickstart_normal();
+		//normal.start();
+
+		//uncomment this section in order to execute quickstart_sat
+		//quickstart_sat sat = new quickstart_sat();
+		//sat.start();
+
+		quickstart_token_bank token_bank = new quickstart_token_bank();
+		token_bank.start();
+	}
+}
 ```
 
 Una vez que has ejecutado el archivo podemos continuar analizando el código.
@@ -252,7 +267,7 @@ foreach (var transaction_item in transactions)
 
 ###Siguientes Pasos
 
-- Puedes consultar y analizar la documentación completa de la librería [aquí](https://github.com/Paybook/sync-net/blob/master/readme.md)
+- Puedes consultar y analizar la documentación completa de la librearía [aquí](https://github.com/Paybook/sync-net/blob/master/README.md)
 
 - Puedes consultar y analizar la documentación del API REST [aquí](https://www.paybook.com/sync/docs#api-Overview)
 
