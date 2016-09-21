@@ -17,7 +17,7 @@ namespace PaybookSDK
         public string dt_create { get; set; }
         public string dt_modify { get; set; }
 
-        public User init(string name, string id_user = "")
+        public User init(string name, string id_user = "", string id_external = "")
         {
             try
             {
@@ -26,6 +26,10 @@ namespace PaybookSDK
                 if (!string.IsNullOrEmpty(name) && string.IsNullOrEmpty(id_user))
                 {
                     JObject data = new JObject(new JProperty("api_key", api_key), new JProperty("name", name));
+                    if (!string.IsNullOrEmpty(id_external))
+                    {
+                        data.Add(new JProperty("id_external", id_external));
+                    }
                     JObject response = call("users", method.post, data);
 
                     user = JsonConvert.DeserializeObject<User>(response["response"].ToString());

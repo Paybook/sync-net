@@ -44,7 +44,7 @@ namespace PaybookSDK
             }
         }
 
-        public List<Account> get(Session session, string id_user = "")
+        public List<Account> get(Session session, string id_user = "", JObject options = null)
         {
             try
             {
@@ -57,6 +57,12 @@ namespace PaybookSDK
                 {
                     parameters = "?token=" + session.token;
                 }
+
+                if (options != null)
+                {
+                    parameters = parameters + Converter.JsonToQueryString(options);
+                }
+
                 List<Account> accounts;
 
                 JObject response = call("accounts" + parameters, method.get);

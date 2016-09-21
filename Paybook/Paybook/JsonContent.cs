@@ -43,4 +43,23 @@ namespace PaybookSDK
             return false;
         }
     }
+
+    public static class Converter
+    {
+        public static string JsonToQueryString(JObject json)
+        {
+            if (json == null)
+            {
+                return string.Empty;
+            }
+
+            StringBuilder sb = new StringBuilder();
+            Dictionary<string, string> values = JsonConvert.DeserializeObject<Dictionary<string, string>>(json.ToString());
+            foreach (KeyValuePair<string, string> entry in values)
+            {
+                sb.AppendLine("&" + entry.Key + "=" + entry.Value);
+            }
+            return sb.ToString();
+        }
+    }
 }
