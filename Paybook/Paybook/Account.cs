@@ -17,8 +17,8 @@ namespace PaybookSDK
         public string id_site { get; set; }
         public string id_site_organization { get; set; }
         public string name { get; set; }
-        public int number { get; set; }
-        public int balance { get; set; }
+        public string number { get; set; }
+        public string balance { get; set; }
         public string site { get; set; }
         public string dt_refresh { get; set; }
         
@@ -33,8 +33,8 @@ namespace PaybookSDK
                 this.id_site = account_json["id_site"].ToString();
                 this.id_site_organization = account_json["id_site_organization"].ToString();
                 this.name = account_json["name"].ToString();
-                this.number = int.Parse(account_json["number"].ToString());
-                this.balance = int.Parse(account_json["balance"].ToString());
+                this.number = account_json["number"].ToString();
+                this.balance = account_json["balance"].ToString();
                 this.site = account_json["site"].ToString();
                 this.dt_refresh = account_json["dt_refresh"].ToString();
             }
