@@ -81,7 +81,7 @@ namespace PaybookSDK
             }
         }
 
-        public int get_count(Session session, string id_user = "")
+        public int get_count(Session session, string id_user = "", JObject options = null)
         {
             try
             {
@@ -94,6 +94,12 @@ namespace PaybookSDK
                 {
                     parameters = "?token=" + session.token;
                 }
+
+                if (options != null)
+                {
+                    parameters = parameters + Converter.JsonToQueryString(options);
+                }
+
                 JObject response = call("transactions/count" + parameters, method.get);
                 Console.WriteLine(response["response"].ToString());
                 return int.Parse(response["response"]["count"].ToString());

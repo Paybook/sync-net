@@ -19,7 +19,7 @@ namespace PaybookSDK
         public string name { get; set; }
         public string number { get; set; }
         public string balance { get; set; }
-        public string site { get; set; }
+        public Site site { get; set; }
         public string dt_refresh { get; set; }
         
         public void init(JObject account_json)
@@ -35,7 +35,7 @@ namespace PaybookSDK
                 this.name = account_json["name"].ToString();
                 this.number = account_json["number"].ToString();
                 this.balance = account_json["balance"].ToString();
-                this.site = account_json["site"].ToString();
+                this.site = JsonConvert.DeserializeObject<Site>(account_json["site"].ToString());
                 this.dt_refresh = account_json["dt_refresh"].ToString();
             }
             catch (Error ex)

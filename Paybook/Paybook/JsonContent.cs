@@ -59,7 +59,7 @@ namespace PaybookSDK
             {
                 sb.AppendLine("&" + entry.Key + "=" + entry.Value);
             }
-            return sb.ToString();
+            return sb.ToString().Trim().Replace("\n", "").Replace("\r", "");
         }
     }
 }
