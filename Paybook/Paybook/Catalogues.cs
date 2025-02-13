@@ -1,17 +1,12 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PaybookSDK
 {
     public class Catalogues : Paybook
     {
 
-        public List<Account_Type> get_account_types(Session session, string id_user = "", Dictionary<string, string> d = null)
+        public List<Account_Type> get_account_types(Session session, string id_user = "", Dictionary<string, string>? d = null)
         {
             try
             {
@@ -39,7 +34,7 @@ namespace PaybookSDK
         }
 
 
-        public List<Attachment_Type> get_attachment_types(Session session, string id_user = "", Dictionary<string, string> d = null)
+        public List<Attachment_Type> get_attachment_types(Session session, string id_user = "", Dictionary<string, string>? d = null)
         {
             try
             {
@@ -67,7 +62,7 @@ namespace PaybookSDK
         }
 
 
-        public List<Country> get_countries(Session session, string id_user = "", Dictionary<string, string> d = null)
+        public List<Country> get_countries(Session session, string id_user = "", Dictionary<string, string>? d = null)
         {
             try
             {
@@ -94,7 +89,7 @@ namespace PaybookSDK
             }
         }
 
-        public List<Site> get_sites(Session session, string id_user = "", Dictionary<string, string> d = null, bool is_test = false)
+        public List<Site> get_sites(Session session, string id_user = "", Dictionary<string, string>? d = null, bool is_test = false)
         {
             try
             {
@@ -125,7 +120,7 @@ namespace PaybookSDK
             }
         }
 
-        public List<Site_Organization> get_site_organizations(Session session, string id_user = "", Dictionary<string, string> d = null, bool is_test = false)
+        public List<Site_Organization> get_site_organizations(Session session, string id_user = "", Dictionary<string, string>? d = null, bool is_test = false)
         {
             try
             {

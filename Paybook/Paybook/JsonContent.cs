@@ -1,14 +1,9 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace PaybookSDK
 {
@@ -26,7 +21,7 @@ namespace PaybookSDK
         }
 
         protected override Task SerializeToStreamAsync(Stream stream,
-            TransportContext context)
+            TransportContext? context)
         {
             var jw = new JsonTextWriter(new StreamWriter(stream))
             {
@@ -34,7 +29,7 @@ namespace PaybookSDK
             };
             _value.WriteTo(jw);
             jw.Flush();
-            return Task.FromResult<object>(null);
+            return Task.FromResult<object?>(null);
         }
 
         protected override bool TryComputeLength(out long length)
@@ -54,7 +49,7 @@ namespace PaybookSDK
             }
 
             StringBuilder sb = new StringBuilder();
-            Dictionary<string, string> values = JsonConvert.DeserializeObject<Dictionary<string, string>>(json.ToString());
+            Dictionary<string, string> values = JsonConvert.DeserializeObject<Dictionary<string, string>>(json.ToString()) ?? new Dictionary<string, string>();
             foreach (KeyValuePair<string, string> entry in values)
             {
                 sb.AppendLine("&" + entry.Key + "=" + entry.Value);

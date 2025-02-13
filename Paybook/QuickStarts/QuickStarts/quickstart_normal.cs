@@ -10,9 +10,9 @@ namespace QuickStarts
 {
     public class quickstart_normal
     {
-        const string YOUR_API_KEY = "YOUR_API_KEY";
-        const string BANK_USERNAME = "YOUR_BANK_USERNAME";
-        const string BANK_PASSWORD = "YOUR_BANK_PASSWORD";
+        const string YOUR_API_KEY = "95daec3b96fe2268128dcd88899d7690";
+        const string BANK_USERNAME = "test";
+        const string BANK_PASSWORD = "test";
 
         public quickstart_normal() { }
 
