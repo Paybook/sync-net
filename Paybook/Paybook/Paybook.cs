@@ -1,10 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Net.Http;
+﻿using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 
@@ -12,7 +6,7 @@ namespace PaybookSDK
 {
     public abstract class Paybook
     {
-        const string paybook_link = "https://sync.paybook.com/v1/";
+        const string paybook_link = "https://opendata-api.syncfy.com/v1/";
 
         public static string api_key { get; set; }
         public enum method { post, get, delete }

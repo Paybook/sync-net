@@ -23,11 +23,11 @@ namespace UnitTesting
         static Account accounts;
         static Transaction transaction;
         static Attachment attachment;
-        const string PAYBOOK_API_KEY = "YOUR_API_KEY";
+        const string PAYBOOK_API_KEY = "Youy API Key";
         const string PAYBOOK_WRONG_API_KEY = "Hola";
-        const string USERNAME = "SOME_PAYBOOK_USERNAME";
+        const string USERNAME = "PRUEBA";
         const string TEST_SITE_NAME = "CIEC"; //For testing with SAT
-        const string CREDENTIALS = @"{ 'rfc' : 'SOME_RFC', 'password' : 'SOME_CIEC' }"; //End of CREDENTIALS 
+        const string CREDENTIALS = @"{ 'rfc' : 'test', 'password' : 'test' }"; //End of CREDENTIALS 
 
         [ClassInitialize()]
         public static void Initialize(TestContext context)
@@ -168,7 +168,7 @@ namespace UnitTesting
             catch (Error ex)
             {
                 Console.WriteLine("error: " + ex.code + " " + ex.message);
-                throw ex;
+                throw;
             }
         }
 

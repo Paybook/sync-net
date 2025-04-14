@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paybook", "Paybook\Paybook.csproj", "{ED50E44A-ADCD-466F-8EB0-B2EE7032B919}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paybook", "Paybook\Paybook.csproj", "{ED50E44A-ADCD-466F-8EB0-B2EE7032B919}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{3807A3FB-8950-4207-A24C-AA7B9AA64E5C}"
 EndProject
