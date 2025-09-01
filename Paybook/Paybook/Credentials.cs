@@ -39,7 +39,7 @@ namespace PaybookSDK
                     data.Add(new JProperty("id_site", id_site));
                     data.Add(new JProperty("credentials", credentials));
                     Console.WriteLine(data.ToString());
-                    credentials_json = call("credentials", method.post, data);
+                    credentials_json = call("credentials/pulls", method.post, data);
                 }
                 if (!string.IsNullOrEmpty(id_site))
                 {
