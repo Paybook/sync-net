@@ -12,7 +12,7 @@ namespace PaybookSDK
 {
     public abstract class Paybook
     {
-        const string paybook_link = "https://sync.paybook.com/v1/";
+        const string paybook_link = "https://opendata-api.syncfy.com/v1/";
 
         public static string api_key { get; set; }
         public enum method { post, get, delete }
